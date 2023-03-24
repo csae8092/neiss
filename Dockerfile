@@ -6,7 +6,7 @@ RUN pip install -U pip setuptools
 RUN mkdir -p /neiss
 WORKDIR /neiss
 
-RUN git clone -b 1.1.1 https://github.com/NEISSproject/tei_entity_enricher.git && git clone -b 1.2.6-ntee1.0.0 https://github.com/NEISSproject/tf2_neiss_nlp.git 
+RUN git clone https://github.com/NEISSproject/tei_entity_enricher.git && git clone https://github.com/NEISSproject/tf2_neiss_nlp.git 
 WORKDIR /neiss/tf2_neiss_nlp 
 RUN pip install -r requirements.txt
 RUN python -m setup develop
