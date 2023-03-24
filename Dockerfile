@@ -1,6 +1,6 @@
 FROM python:3.10-buster
 
-RUN apt-get update -y && apt-get upgrade -y && apt-get install git vim libpq-dev python3-dev build-essential
+RUN apt-get update -y && apt-get upgrade -y && apt-get install git vim libpq-dev python3-dev build-essential -y
 
 RUN mkdir -p /neiss
 WORKDIR /neiss
