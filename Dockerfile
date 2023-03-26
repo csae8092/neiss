@@ -10,9 +10,10 @@ RUN git clone -b 1.1.1 https://github.com/NEISSproject/tei_entity_enricher.git &
 WORKDIR /neiss/tf2_neiss_nlp 
 RUN pip install -r requirements.txt
 RUN python -m setup develop
-WORKDIR /neis/tei_entity_enricher
+WORKDIR /neiss/tei_entity_enricher
 RUN pip install -r requirements.txt
 RUN python -m setup develop
 WORKDIR /neiss
+VOLUME /neiss
 
-CMD ["/bin/bash"]
+CMD ["ntee-start"]
