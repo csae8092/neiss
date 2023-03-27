@@ -12,8 +12,7 @@ repo for a dockerized verison on [NEISS tei_entity_enricher](https://github.com/
 
 Make sure you have a directory called `data` in your current working direcotry so you can mount XML/TEI files you'd want to process.
 
-`docker run -v $PWD/data:/neiss/data --name neiss neiss:latest`
 
-### using the published image
+* `docker run -v $PWD/data:/neiss/data --name neiss ghcr.io/csae8092/neiss:main` (use the published image)
+* `docker run -v $PWD/data:/neiss/data --name neiss neiss:latest` (use your locally built image)
 
-`docker run -v $PWD/data:/neiss/data --name neiss ghcr.io/csae8092/neiss:main`
