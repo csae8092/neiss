@@ -14,6 +14,6 @@ WORKDIR /neiss/tei_entity_enricher
 RUN pip install -r requirements.txt
 RUN python -m setup develop
 WORKDIR /neiss
-VOLUME /neiss
+VOLUME /neiss/data
 
 CMD ["ntee-start"]
